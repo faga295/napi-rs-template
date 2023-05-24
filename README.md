@@ -12,5 +12,5 @@
 
 ```
 # degit is better than git clone
-degit faga295/napi-rs-template
+degit faga295/napi-rs-template my-project
 ```
