@@ -89,7 +89,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: bindings-${{ matrix.settings.target }}
-          path: crates/node-binding/${{ env.APP_NAME }}.*.node
+          path: crates/node_binding/${{ env.APP_NAME }}.*.node
           if-no-files-found: error
   # test-macOS-windows-binding:
   #   name: Test bindings on ${{ matrix.settings.target }} - node@${{ matrix.node }}
