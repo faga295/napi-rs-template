@@ -111,7 +111,7 @@ for (const binding of bindings) {
 	} = parseTriple(name.slice(9));
 	assert(
 		file.split(".")[1] == platformArchABI,
-		`Binding is not matched with triple (expected: tokei-core.${platformArchABI}.node, got: ${file})`
+		`Binding is not matched with triple (expected: node-binding.${platformArchABI}.node, got: ${file})`
 	);
 
 	// <absolute-path-to-npm>/linux-x64-musl

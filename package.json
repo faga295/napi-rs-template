@@ -5,7 +5,7 @@
   "main": "index.js",
   "private": true,
   "scripts": {
-    "build:rs": "pnpm --filter @faga/node_binding build",
+    "build:rs": "pnpm --filter \"@faga/node-binding\" build",
     "build:js": "pnpm --filter @faga/template build",
     "play": "pnpm -C playground play",
     "changeset": "changeset",

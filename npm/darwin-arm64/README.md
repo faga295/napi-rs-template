@@ -1,3 +1,3 @@
-# `@faga/tokei-darwin-arm64`
+# `@faga/node-binding-darwin-arm64`
 
-This is the **aarch64-apple-darwin** binary for `@faga/tokei`
+This is the **aarch64-apple-darwin** binary for `@faga/node-binding`

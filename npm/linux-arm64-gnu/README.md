@@ -1,3 +1,3 @@
-# `@faga/tokei-linux-arm64-gnu`
+# `@faga/node-binding-linux-arm64-gnu`
 
-This is the **aarch64-unknown-linux-gnu** binary for `@faga/tokei`
+This is the **aarch64-unknown-linux-gnu** binary for `@faga/node-binding`

@@ -1,8 +1,3 @@
-import tokei from '@faga/tokei'
-import process from 'process'
+import template from '@faga/template'
 
-const include = [process.cwd()]
-
-const exclude = ['node_modules']
-
-console.log(tokei({ include, exclude, languages: ['TypeScript'] }))
+template()

@@ -28,7 +28,7 @@
     "registry": "https://registry.npmjs.org/",
     "access": "public"
   },
-  "repository": "git@github.com:faga295/napi-tokei.git",
+  "repository": "git@github.com:faga295/napi-rs-template.git",
   "libc": [
     "glibc"
   ]

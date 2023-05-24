@@ -4,7 +4,7 @@
   "description": "Get your code stats, blazing fast",
   "main": "index.js",
   "types": "index.d.ts",
-  "repository": "git@github.com:faga295/napi-tokei.git",
+  "repository": "git@github.com:faga295/napi-rs-template.git",
   "license": "MIT",
   "keywords": [
     "napi-rs",
@@ -19,7 +19,7 @@
     "index.js"
   ],
   "napi": {
-    "name": "node_binding",
+    "name": "node-binding",
     "triples": {
       "defaults": true,
       "additional": [

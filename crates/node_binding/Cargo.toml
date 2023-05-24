@@ -1,7 +1,7 @@
 [package]
 authors = [""]
 edition = "2021"
-name = "node_binding"
+name = "node-binding"
 version = "0.1.0"
 main = "src/main.rs"
 

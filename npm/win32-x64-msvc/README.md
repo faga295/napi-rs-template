@@ -1,3 +1,3 @@
-# `@faga/tokei-win32-x64-msvc`
+# `@faga/node-binding-win32-x64-msvc`
 
-This is the **x86_64-pc-windows-msvc** binary for `@faga/tokei`
+This is the **x86_64-pc-windows-msvc** binary for `@faga/node-binding`
