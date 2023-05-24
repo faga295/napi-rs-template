@@ -8,7 +8,6 @@
     "build:rs": "pnpm --filter @faga/node_binding build",
     "build:js": "pnpm --filter @faga/template build",
     "play": "pnpm -C playground play",
-    "test": "pnpm -C crates/tokei-core test",
     "changeset": "changeset",
     "release": "changeset publish --no-git-checks",
     "bump": "changeset version",

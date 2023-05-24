@@ -26,24 +26,24 @@ switch (platform) {
   case 'android':
     switch (arch) {
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, 'tokei-core.android-arm64.node'))
+        localFileExisted = existsSync(join(__dirname, 'node-binding.android-arm64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./tokei-core.android-arm64.node')
+            nativeBinding = require('./node-binding.android-arm64.node')
           } else {
-            nativeBinding = require('@faga/tokei-core-android-arm64')
+            nativeBinding = require('@faga/node-binding-android-arm64')
           }
         } catch (e) {
           loadError = e
         }
         break
       case 'arm':
-        localFileExisted = existsSync(join(__dirname, 'tokei-core.android-arm-eabi.node'))
+        localFileExisted = existsSync(join(__dirname, 'node-binding.android-arm-eabi.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./tokei-core.android-arm-eabi.node')
+            nativeBinding = require('./node-binding.android-arm-eabi.node')
           } else {
-            nativeBinding = require('@faga/tokei-core-android-arm-eabi')
+            nativeBinding = require('@faga/node-binding-android-arm-eabi')
           }
         } catch (e) {
           loadError = e
@@ -56,36 +56,36 @@ switch (platform) {
   case 'win32':
     switch (arch) {
       case 'x64':
-        localFileExisted = existsSync(join(__dirname, 'tokei-core.win32-x64-msvc.node'))
+        localFileExisted = existsSync(join(__dirname, 'node-binding.win32-x64-msvc.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./tokei-core.win32-x64-msvc.node')
+            nativeBinding = require('./node-binding.win32-x64-msvc.node')
           } else {
-            nativeBinding = require('@faga/tokei-core-win32-x64-msvc')
+            nativeBinding = require('@faga/node-binding-win32-x64-msvc')
           }
         } catch (e) {
           loadError = e
         }
         break
       case 'ia32':
-        localFileExisted = existsSync(join(__dirname, 'tokei-core.win32-ia32-msvc.node'))
+        localFileExisted = existsSync(join(__dirname, 'node-binding.win32-ia32-msvc.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./tokei-core.win32-ia32-msvc.node')
+            nativeBinding = require('./node-binding.win32-ia32-msvc.node')
           } else {
-            nativeBinding = require('@faga/tokei-core-win32-ia32-msvc')
+            nativeBinding = require('@faga/node-binding-win32-ia32-msvc')
           }
         } catch (e) {
           loadError = e
         }
         break
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, 'tokei-core.win32-arm64-msvc.node'))
+        localFileExisted = existsSync(join(__dirname, 'node-binding.win32-arm64-msvc.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./tokei-core.win32-arm64-msvc.node')
+            nativeBinding = require('./node-binding.win32-arm64-msvc.node')
           } else {
-            nativeBinding = require('@faga/tokei-core-win32-arm64-msvc')
+            nativeBinding = require('@faga/node-binding-win32-arm64-msvc')
           }
         } catch (e) {
           loadError = e
@@ -96,35 +96,35 @@ switch (platform) {
     }
     break
   case 'darwin':
-    localFileExisted = existsSync(join(__dirname, 'tokei-core.darwin-universal.node'))
+    localFileExisted = existsSync(join(__dirname, 'node-binding.darwin-universal.node'))
     try {
       if (localFileExisted) {
-        nativeBinding = require('./tokei-core.darwin-universal.node')
+        nativeBinding = require('./node-binding.darwin-universal.node')
       } else {
-        nativeBinding = require('@faga/tokei-core-darwin-universal')
+        nativeBinding = require('@faga/node-binding-darwin-universal')
       }
       break
     } catch {}
     switch (arch) {
       case 'x64':
-        localFileExisted = existsSync(join(__dirname, 'tokei-core.darwin-x64.node'))
+        localFileExisted = existsSync(join(__dirname, 'node-binding.darwin-x64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./tokei-core.darwin-x64.node')
+            nativeBinding = require('./node-binding.darwin-x64.node')
           } else {
-            nativeBinding = require('@faga/tokei-core-darwin-x64')
+            nativeBinding = require('@faga/node-binding-darwin-x64')
           }
         } catch (e) {
           loadError = e
         }
         break
       case 'arm64':
-        localFileExisted = existsSync(join(__dirname, 'tokei-core.darwin-arm64.node'))
+        localFileExisted = existsSync(join(__dirname, 'node-binding.darwin-arm64.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./tokei-core.darwin-arm64.node')
+            nativeBinding = require('./node-binding.darwin-arm64.node')
           } else {
-            nativeBinding = require('@faga/tokei-core-darwin-arm64')
+            nativeBinding = require('@faga/node-binding-darwin-arm64')
           }
         } catch (e) {
           loadError = e
@@ -138,12 +138,12 @@ switch (platform) {
     if (arch !== 'x64') {
       throw new Error(`Unsupported architecture on FreeBSD: ${arch}`)
     }
-    localFileExisted = existsSync(join(__dirname, 'tokei-core.freebsd-x64.node'))
+    localFileExisted = existsSync(join(__dirname, 'node-binding.freebsd-x64.node'))
     try {
       if (localFileExisted) {
-        nativeBinding = require('./tokei-core.freebsd-x64.node')
+        nativeBinding = require('./node-binding.freebsd-x64.node')
       } else {
-        nativeBinding = require('@faga/tokei-core-freebsd-x64')
+        nativeBinding = require('@faga/node-binding-freebsd-x64')
       }
     } catch (e) {
       loadError = e
@@ -153,23 +153,23 @@ switch (platform) {
     switch (arch) {
       case 'x64':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, 'tokei-core.linux-x64-musl.node'))
+          localFileExisted = existsSync(join(__dirname, 'node-binding.linux-x64-musl.node'))
           try {
             if (localFileExisted) {
-              nativeBinding = require('./tokei-core.linux-x64-musl.node')
+              nativeBinding = require('./node-binding.linux-x64-musl.node')
             } else {
-              nativeBinding = require('@faga/tokei-core-linux-x64-musl')
+              nativeBinding = require('@faga/node-binding-linux-x64-musl')
             }
           } catch (e) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, 'tokei-core.linux-x64-gnu.node'))
+          localFileExisted = existsSync(join(__dirname, 'node-binding.linux-x64-gnu.node'))
           try {
             if (localFileExisted) {
-              nativeBinding = require('./tokei-core.linux-x64-gnu.node')
+              nativeBinding = require('./node-binding.linux-x64-gnu.node')
             } else {
-              nativeBinding = require('@faga/tokei-core-linux-x64-gnu')
+              nativeBinding = require('@faga/node-binding-linux-x64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -178,23 +178,23 @@ switch (platform) {
         break
       case 'arm64':
         if (isMusl()) {
-          localFileExisted = existsSync(join(__dirname, 'tokei-core.linux-arm64-musl.node'))
+          localFileExisted = existsSync(join(__dirname, 'node-binding.linux-arm64-musl.node'))
           try {
             if (localFileExisted) {
-              nativeBinding = require('./tokei-core.linux-arm64-musl.node')
+              nativeBinding = require('./node-binding.linux-arm64-musl.node')
             } else {
-              nativeBinding = require('@faga/tokei-core-linux-arm64-musl')
+              nativeBinding = require('@faga/node-binding-linux-arm64-musl')
             }
           } catch (e) {
             loadError = e
           }
         } else {
-          localFileExisted = existsSync(join(__dirname, 'tokei-core.linux-arm64-gnu.node'))
+          localFileExisted = existsSync(join(__dirname, 'node-binding.linux-arm64-gnu.node'))
           try {
             if (localFileExisted) {
-              nativeBinding = require('./tokei-core.linux-arm64-gnu.node')
+              nativeBinding = require('./node-binding.linux-arm64-gnu.node')
             } else {
-              nativeBinding = require('@faga/tokei-core-linux-arm64-gnu')
+              nativeBinding = require('@faga/node-binding-linux-arm64-gnu')
             }
           } catch (e) {
             loadError = e
@@ -202,12 +202,12 @@ switch (platform) {
         }
         break
       case 'arm':
-        localFileExisted = existsSync(join(__dirname, 'tokei-core.linux-arm-gnueabihf.node'))
+        localFileExisted = existsSync(join(__dirname, 'node-binding.linux-arm-gnueabihf.node'))
         try {
           if (localFileExisted) {
-            nativeBinding = require('./tokei-core.linux-arm-gnueabihf.node')
+            nativeBinding = require('./node-binding.linux-arm-gnueabihf.node')
           } else {
-            nativeBinding = require('@faga/tokei-core-linux-arm-gnueabihf')
+            nativeBinding = require('@faga/node-binding-linux-arm-gnueabihf')
           }
         } catch (e) {
           loadError = e

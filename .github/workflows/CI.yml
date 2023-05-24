@@ -1,12 +1,12 @@
 name: CI
 env:
   DEBUG: napi:*
-  APP_NAME: tokei-core
+  APP_NAME: node_binding
   MACOSX_DEPLOYMENT_TARGET: '10.13'
 'on':
   push:
     branches:
-      - main
+      - master
     tags-ignore:
       - '**'
     paths-ignore:
@@ -15,7 +15,7 @@ env:
       - '**/*.gitignore'
       - .editorconfig
       - docs/**
-  pull_request: null
+
 jobs:
   build:
     if: "!contains(github.event.head_commit.message, 'skip ci')"
@@ -27,7 +27,6 @@ jobs:
             target: x86_64-apple-darwin
             build: |
               pnpm build:rs
-              strip -x crates/tokei-core/*.node
           - host: windows-latest
             build: pnpm build:rs
             target: x86_64-pc-windows-msvc
@@ -40,14 +39,12 @@ jobs:
               SYSROOT=$(xcrun --sdk macosx --show-sdk-path);
               export CFLAGS="-isysroot $SYSROOT -isystem $SYSROOT";
               pnpm build:rs --target aarch64-apple-darwin
-              strip -x crates/tokei-core/*.node
           - host: ubuntu-latest
             target: aarch64-unknown-linux-gnu
             docker: ghcr.io/napi-rs/napi-rs/nodejs-rust:lts-debian-aarch64
             build: |-
               set -e &&
               pnpm build:rs --target aarch64-unknown-linux-gnu &&
-              aarch64-unknown-linux-gnu-strip crates/tokei-core/*.node
     name: stable - ${{ matrix.settings.target }} - node@18
     runs-on: ${{ matrix.settings.host }}
     steps:
@@ -92,7 +89,7 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: bindings-${{ matrix.settings.target }}
-          path: crates/tokei-core/${{ env.APP_NAME }}.*.node
+          path: crates/node_binding/${{ env.APP_NAME }}.*.node
           if-no-files-found: error
   # test-macOS-windows-binding:
   #   name: Test bindings on ${{ matrix.settings.target }} - node@${{ matrix.node }}

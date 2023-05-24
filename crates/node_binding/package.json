@@ -1,5 +1,5 @@
 {
-  "name": "@faga/node_binding",
+  "name": "@faga/node-binding",
   "version": "0.0.9",
   "description": "Get your code stats, blazing fast",
   "main": "index.js",
@@ -19,7 +19,7 @@
     "index.js"
   ],
   "napi": {
-    "name": "tokei-core",
+    "name": "node_binding",
     "triples": {
       "defaults": true,
       "additional": [
@@ -35,7 +35,7 @@
     "access": "public"
   },
   "scripts": {
-    "build": "napi build --platform --release --js-package-name @faga/tokei-core --pipe \"prettier -w\"",
+    "build": "napi build --platform --release --js-package-name @faga/node-binding --pipe \"prettier -w\"",
     "build:debug": "napi build --platform --pipe \"prettier -w\"",
     "format": "run-p format:prettier format:rs",
     "format:prettier": "prettier . -w",
@@ -45,10 +45,10 @@
     "@napi-rs/cli": "^2.13.2"
   },
   "optionalDependencies": {
-    "@faga/tokei-core-darwin-arm64": "workspace:*",
-    "@faga/tokei-core-darwin-x64": "workspace:*",
-    "@faga/tokei-core-linux-arm64-gnu": "workspace:*",
-    "@faga/tokei-core-win32-x64-msvc": "workspace:*"
+    "@faga/node-binding-darwin-arm64": "workspace:*",
+    "@faga/node-binding-darwin-x64": "workspace:*",
+    "@faga/node-binding-linux-arm64-gnu": "workspace:*",
+    "@faga/node-binding-win32-x64-msvc": "workspace:*"
   },
   "ava": {
     "require": [

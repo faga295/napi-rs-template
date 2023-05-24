@@ -1,5 +1,5 @@
 {
-  "name": "@faga/tokei-core-darwin-arm64",
+  "name": "@faga/node_binding-darwin-arm64",
   "version": "0.0.9",
   "os": [
     "darwin"
