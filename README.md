@@ -1,33 +1,9 @@
-# napi-tokei
+# napi-rs-template
 
-`napi-tokei` is a node binding built with `tokei`, helping you count your code quickly.
+`napi-rs-template` is a template for `napi-rs` user.
 
-## Install
+## Features
 
-Choose your preferred package manager.
-
-```
-
-# NPM
-$ npm install @faga/tokei
-
-# YARN
-$ yarn add @faga/tokei
-
-# PNPM
-$ pnpm install @faga/tokei
-
-```
-
-## Examples
-
-```ts
-import tokei from '@faga/tokei'
-import process from 'process'
-
-const include = [process.cwd()]
-
-const exclude = ['node_modules']
-
-console.log(tokei({ include, exclude, languages: ['TypeScript'] }))
-```
+- :paperclip: Use `pnpm as package manager`(package-template use yarn).
+- Better support for monorepo(pnpm workspace, changeset).
+- Use Jest as test framework instead of ava.
