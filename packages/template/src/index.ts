@@ -1,4 +1,4 @@
-import { template  } from '@faga/node_binding'
+import { template  } from '@faga/node-binding'
 
 
 export default () => console.log(template)

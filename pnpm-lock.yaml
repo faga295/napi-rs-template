@@ -34,18 +34,9 @@ importers:
 
   crates/node_binding:
     optionalDependencies:
-      '@faga/tokei-core-darwin-arm64':
-        specifier: workspace:*
-        version: link:../../npm/darwin-arm64
-      '@faga/tokei-core-darwin-x64':
+      '@faga/node-binding-darwin-x64':
         specifier: workspace:*
         version: link:../../npm/darwin-x64
-      '@faga/tokei-core-linux-arm64-gnu':
-        specifier: workspace:*
-        version: link:../../npm/linux-arm64-gnu
-      '@faga/tokei-core-win32-x64-msvc':
-        specifier: workspace:*
-        version: link:../../npm/win32-x64-msvc
     devDependencies:
       '@napi-rs/cli':
         specifier: ^2.13.2
@@ -61,7 +52,7 @@ importers:
 
   packages/template:
     dependencies:
-      '@faga/node_binding':
+      '@faga/node-binding':
         specifier: workspace:*
         version: link:../../crates/node_binding
 
