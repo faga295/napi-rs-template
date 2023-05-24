@@ -1,0 +1,66 @@
+{
+  "name": "@faga/node_binding",
+  "version": "0.0.9",
+  "description": "Get your code stats, blazing fast",
+  "main": "index.js",
+  "types": "index.d.ts",
+  "repository": "git@github.com:faga295/napi-tokei.git",
+  "license": "MIT",
+  "keywords": [
+    "napi-rs",
+    "NAPI",
+    "N-API",
+    "Rust",
+    "node-addon",
+    "node-addon-api"
+  ],
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "napi": {
+    "name": "tokei-core",
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "aarch64-apple-darwin"
+      ]
+    }
+  },
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "registry": "https://registry.npmjs.org/",
+    "access": "public"
+  },
+  "scripts": {
+    "build": "napi build --platform --release --js-package-name @faga/tokei-core --pipe \"prettier -w\"",
+    "build:debug": "napi build --platform --pipe \"prettier -w\"",
+    "format": "run-p format:prettier format:rs",
+    "format:prettier": "prettier . -w",
+    "format:rs": "cargo fmt"
+  },
+  "devDependencies": {
+    "@napi-rs/cli": "^2.13.2"
+  },
+  "optionalDependencies": {
+    "@faga/tokei-core-darwin-arm64": "workspace:*",
+    "@faga/tokei-core-darwin-x64": "workspace:*",
+    "@faga/tokei-core-linux-arm64-gnu": "workspace:*",
+    "@faga/tokei-core-win32-x64-msvc": "workspace:*"
+  },
+  "ava": {
+    "require": [
+      "@swc-node/register"
+    ],
+    "extensions": [
+      "ts"
+    ],
+    "timeout": "2m",
+    "workerThreads": false,
+    "environmentVariables": {
+      "TS_NODE_PROJECT": "../../tsconfig.json"
+    }
+  }
+}
