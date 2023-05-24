@@ -5,5 +5,12 @@
 ## Features
 
 - :paperclip: Use `pnpm as package manager`(package-template use yarn).
-- :anchor: Better support for monorepo(pnpm workspace, changeset).
+- :rocket: Better support for monorepo(pnpm workspace, changeset).
 - :dart: Use Jest as test framework instead of ava.
+
+## Usage
+
+```
+# degit is better than git clone
+degit faga295/napi-rs-template
+```
