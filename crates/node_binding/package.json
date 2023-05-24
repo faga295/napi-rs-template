@@ -1,6 +1,6 @@
 {
   "name": "@faga/node-binding",
-  "version": "0.0.9",
+  "version": "0.0.1",
   "description": "Get your code stats, blazing fast",
   "main": "index.js",
   "types": "index.d.ts",
