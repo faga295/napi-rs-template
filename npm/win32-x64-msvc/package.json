@@ -1,5 +1,5 @@
 {
-  "name": "@faga/tokei-core-win32-x64-msvc",
+  "name": "@faga/node-binding-win32-x64-msvc",
   "version": "0.0.9",
   "os": [
     "win32"
@@ -7,9 +7,9 @@
   "cpu": [
     "x64"
   ],
-  "main": "tokei-core.win32-x64-msvc.node",
+  "main": "node-binding.win32-x64-msvc.node",
   "files": [
-    "tokei-core.win32-x64-msvc.node"
+    "node-binding.win32-x64-msvc.node"
   ],
   "description": "Get your code info, blazing fast",
   "keywords": [
