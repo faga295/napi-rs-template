@@ -1,6 +1,6 @@
 # napi-rs-template
 
-`napi-rs-template` is a template for `napi-rs` user.[package-template](https://github.com/napi-rs/package-template)
+`napi-rs-template` is a template for `napi-rs` user, inspired by [rspack](https://github.com/web-infra-dev/rspack).
 
 ## Features
 
